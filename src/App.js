@@ -9,6 +9,9 @@ function App() {
   var [totalSales, setTotalSales] = useState(0);
   var [notes, setNotes] = useState("");
   var [messageList, setMessageList] = useState([]);
+
+  // assume , we are 1 year -> 365 day
+  //1day - totalSales/365
   const calculate = (e) => {
     e.preventDefault();
     console.log("Price: ", price);
@@ -54,6 +57,7 @@ function App() {
           onChange = {e => setNotes(e.target.value)}
           /><br/>
         <p>Total Number of items to Sell : {totalSales}</p>
+        <p>1 year , 1 day sale count: {totalSale/365}</p>
 
 
         <input type="submit" value="Calculate" />
