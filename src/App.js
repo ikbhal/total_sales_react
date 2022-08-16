@@ -57,7 +57,8 @@ function App() {
           onChange = {e => setNotes(e.target.value)}
           /><br/>
         <p>Total Number of items to Sell : {totalSales}</p>
-        <p>1 year , 1 day sale count: {totalSale/365}</p>
+        {/* // 2.7 -> 2, round 3  */}
+        <p>1 year , 1 day sale count: {Math.trunc(totalSales/365)}</p>
 
 
         <input type="submit" value="Calculate" />
